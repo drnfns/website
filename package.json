@@ -3,10 +3,10 @@
   "type": "module",
   "packageManager": "yarn@4.9.1",
   "scripts": {
-    "minify": "lightningcss --minify --bundle --targets \"defaults and not dead\" _site/output.css -o _site/output.css",
-    "build:css": "tailwindcss -i ./site/input.css -o ./site/output.css",
+    "minify": "yarn lightningcss --minify --targets \"defaults and not dead\" _site/output.css -o _site/output.css",
+    "build:css": "tailwindcss -i ./site/input.css -o ./_site/output.css",
     "build:site": "eleventy",
-    "build": "concurrently yarn:build:\\*",
+    "build": "yarn concurrently yarn:build:\\* && yarn minify",
     "dev:css": "yarn build:css --watch",
     "dev:site": "yarn build:site --serve",
     "dev": "concurrently yarn:dev:\\*"
