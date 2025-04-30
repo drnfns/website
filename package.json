@@ -3,9 +3,21 @@
   "type": "module",
   "packageManager": "yarn@4.9.1",
   "scripts": {
-    "11ty": "eleventy"
+    "minify": "lightningcss --minify --bundle --targets \"defaults and not dead\" _site/output.css -o _site/output.css",
+    "build:css": "tailwindcss -i ./site/input.css -o ./site/output.css",
+    "build:site": "eleventy",
+    "build": "concurrently yarn:build:\\*",
+    "dev:css": "yarn build:css --watch",
+    "dev:site": "yarn build:site --serve",
+    "dev": "concurrently yarn:dev:\\*"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@tailwindcss/cli": "^4.1.5",
+    "concurrently": "^9.1.2",
+    "lightningcss-cli": "^1.29.3"
+  },
+  "dependencies": {
+    "tailwindcss": "^4.1.5"
   }
 }
