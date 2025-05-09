@@ -14,32 +14,22 @@
   font-display: swap;
 }
 
-:root {
-  --background: #2b2933;
-  --f_high: #f2f2f2;
-  --f_med: #00bdd6;
-  --f_low: #aa9fdf;
-  --f_inv: #1a1820;
-  --b_high: #1a1820;
-  --b_med: #24212c;
-  --b_low: #34303b;
-  --b_inv: #f2f2f2;
-}
+:root {}
 
 @theme {
   --font-mono: "Departure Mono", monospace, monospace;
 
   --color-*: initial;
-  --color-background: var(--background);
-  --color-b-high: var(--b_high);
-  --color-b-med: var(--b_med);
-  --color-b-low: var(--b_low);
-  --color-b-inv: var(--b_inv);
 
-  --color-f-high: var(--f_high);
-  --color-f-med: var(--f_med);
-  --color-f-low: var(--f_low);
-  --color-f-inv: var(--f_inv);
+  --color-background: #2b2933;
+  --color-f-high: #f2f2f2;
+  --color-f-med: #00bdd6;
+  --color-f-low: #aa9fdf;
+  --color-f-inv: #1a1820;
+  --color-b-high: #1a1820;
+  --color-b-med: #24212c;
+  --color-b-low: #34303b;
+  --color-b-inv: #f2f2f2;
 }
 
 @view-transition {
